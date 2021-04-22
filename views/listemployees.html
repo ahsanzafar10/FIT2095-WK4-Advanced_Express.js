@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<a href="/">Home</a> <br>
+<a href="/newemployee">New Employee</a> <br>
+
+<h2>List of Employees</h2>
+
+<table id="customers">
+  <tr>
+    <th>#</th>
+    <th>Name</th>
+    <th>Date of Birth</th>
+    <th>Department</th>
+  </tr>
+
+  <%for (let i=0; i<ar.length; i++) { %>
+  <tr>
+    <td> <%= (i+1)%>  </td>
+    <td> <%= ar[i].name%>  </td>
+    <td> <%= ar[i].dob%>  </td>
+    <td> <%= ar[i].department%>  </td>
+  </tr>
+  <%  }%>
+
+
+</table>
+
+</body>
+</html>
